@@ -1,54 +1,59 @@
+<script>
+    num_items = 5;
+    // Product 1
+    var brand1 = "HTC";
+    var price1 = 40.00;
+    var image1 = "http://dport96.github.io/ITM352/morea/080.flow-control-II/HTC.jpg";
+    // Product 2
+    var brand2 = "Apple";
+    var price2 = 75.00;
+    var image2 = "http://dport96.github.io/ITM352/morea/080.flow-control-II/iphone-3gs.jpg";
+    // Product 3
+    var brand3 = "Nokia";
+    var price3 = 35.00;
+    var image3 = "http://dport96.github.io/ITM352/morea/080.flow-control-II/Nokia.jpg";
+    // Product 4
+    var brand4 = "Samsung";
+    var price4 = 45.00;
+    var image4 = "http://dport96.github.io/ITM352/morea/080.flow-control-II/Samsung.jpg";
+    // Product 5
+    var brand5 = "Blackberry";
+    var price5 = 10.00;
+    var image5 = "http://dport96.github.io/ITM352/morea/080.flow-control-II/Blackberry.jpg";
+</script>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Used Smartphone Store</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smart Phone Store</title>
+    <link rel="stylesheet" href="product-style.css">
+    <style id="localstyle"></style>
 </head>
+
 <header>
-    <h1 align="center">Jayla's Used Smartphone Store</h1>
+
+    <h1>Used Smartphone Store</h1>
+
 </header>
+<div>
+    <main>
+        <script>
+            for (i = 1; i <= num_items; i++) {
+                document.write(`
+ <section class="item">
+            <h2>${eval('brand'+i)}</h2>
+            <p>$${eval('price'+i)}</p>
+            <img src=${eval('image'+i)}>
+        </section>`);
+            }
+        </script>
 
-<body>
-    <div>
-        <main>
-            <section class="item" id="HTC">
-                <h2>HTC</h2>
-                <p>$40.00</p>
-                <img src="http://dport96.github.io/ITM352/morea/080.flow-control-II/HTC.jpg" alt="HTC Phones">
-            </section>
-
-            <section class="item">
-                <h2>Apple</h2> 
-                <p>$75.00</p>
-                <img src="http://dport96.github.io/ITM352/morea/080.flow-control-II/iphone-3gs.jpg">
-            </section>
-
-            <section class="item">
-                <h2>Nokia</h2>
-                <p>$35.00</p>
-                <img src="http://dport96.github.io/ITM352/morea/080.flow-control-II/Nokia.jpg">
-            </section>
-
-            <section class="item">
-                <h2>Samsung</h2>
-                <p>$45.00</p>
-                <img src="http://dport96.github.io/ITM352/morea/080.flow-control-II/Samsung.jpg">
-            </section>
-
-            <section class="item">
-                <h2>Blackberry</h2>
-                <p>$10.00</p>
-                <img src="http://dport96.github.io/ITM352/morea/080.flow-control-II/Blackberry.jpg">
-            </section>
-        
-        </main>
-    </div>
-    <footer>
-        <h1 align="center">
-            Your One Stop Phone Shop
-        </h1>
-    </footer>
-</body>
+    </main>
+</div>
+<footer>
+    <h1>Your One Stop Phone Shop</h1>
+</footer>
 
 </html>
